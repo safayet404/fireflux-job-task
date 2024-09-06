@@ -1,0 +1,183 @@
+ [
+  {
+    "id": 1,
+    "name": "Classic Rocking Chair",
+    "category": "Rocking Chair",
+    "price": "50.25",
+    "priceAfterDiscount": "35.18",
+    "imgSrc": "images/armchair.png",
+    "description": "A timeless classic rocking chair perfect for relaxing."
+  },
+  {
+    "id": 2,
+    "name": "Modern Rocking Chair",
+    "category": "Rocking Chair",
+    "price": "102.00",
+    "priceAfterDiscount": "71.40",
+    "imgSrc": "images/bed.png",
+    "description": "A sleek and modern rocking chair with a stylish design."
+  },
+  {
+    "id": 3,
+    "name": "Elegant Rocking Bench",
+    "category": "Rocking Chair",
+    "price": "15.00",
+    "priceAfterDiscount": "10.50",
+    "imgSrc": "images/bench.png",
+    "description": "An elegant rocking bench that adds charm to any space."
+  },
+  {
+    "id": 4,
+    "name": "Space-Saving Rocking Chair",
+    "category": "Rocking Chair",
+    "price": "23.75",
+    "priceAfterDiscount": "16.63",
+    "imgSrc": "images/bunk-bed.png",
+    "description": "A space-saving rocking chair ideal for compact areas."
+  },
+  {
+    "id": 5,
+    "name": "Luxury Rocking Chair",
+    "category": "Rocking Chair",
+    "price": "50.00",
+    "priceAfterDiscount": "35.00",
+    "imgSrc": "images/cabinet.png",
+    "description": "A luxury rocking chair with plush seating for maximum comfort."
+  },
+  {
+    "id": 6,
+    "name": "Contemporary Side Chair",
+    "category": "Side Chair",
+    "price": "200.50",
+    "priceAfterDiscount": "140.35",
+    "imgSrc": "images/card-table.png",
+    "description": "A contemporary side chair that complements modern decor."
+  },
+  {
+    "id": 7,
+    "name": "Comfortable Side Cushion",
+    "category": "Side Chair",
+    "price": "5.50",
+    "priceAfterDiscount": "3.85",
+    "imgSrc": "images/cushion.png",
+    "description": "A comfortable cushion that enhances the comfort of your side chair."
+  },
+  {
+    "id": 8,
+    "name": "Ergonomic Office Chair",
+    "category": "Side Chair",
+    "price": "25.00",
+    "priceAfterDiscount": "17.50",
+    "imgSrc": "images/desk.png",
+    "description": "An ergonomic office chair designed for long hours of work."
+  },
+  {
+    "id": 9,
+    "name": "Stylish Side Chair",
+    "category": "Side Chair",
+    "price": "49.00",
+    "priceAfterDiscount": "34.30",
+    "imgSrc": "images/drawer.png",
+    "description": "A stylish side chair that adds elegance to any room."
+  },
+  {
+    "id": 10,
+    "name": "Modern Side Chair",
+    "category": "Side Chair",
+    "price": "60.99",
+    "priceAfterDiscount": "42.69",
+    "imgSrc": "images/office-chair.png",
+    "description": "A modern side chair with a sleek design for contemporary spaces."
+  },
+  {
+    "id": 11,
+    "name": "Comfortable Lounge Chair",
+    "category": "Lounge Chair",
+    "price": "69.20",
+    "priceAfterDiscount": "48.44",
+    "imgSrc": "images/scissors-chair.png",
+    "description": "A comfortable lounge chair perfect for relaxing."
+  },
+  {
+    "id": 12,
+    "name": "Elegant Lounge Sofa",
+    "category": "Lounge Chair",
+    "price": "224.99",
+    "priceAfterDiscount": "157.49",
+    "imgSrc": "images/sleeper-sofa.png",
+    "description": "An elegant lounge sofa that offers both comfort and style."
+  },
+  {
+    "id": 13,
+    "name": "Chic Lounge Chair",
+    "category": "Lounge Chair",
+    "price": "90.25",
+    "priceAfterDiscount": "63.18",
+    "imgSrc": "images/sleigh-bed.png",
+    "description": "A chic lounge chair with a modern design for any living space."
+  },
+  {
+    "id": 14,
+    "name": "Cozy Lounge Sofa Bed",
+    "category": "Lounge Chair",
+    "price": "99.99",
+    "priceAfterDiscount": "69.99",
+    "imgSrc": "images/sofa-bed.png",
+    "description": "A cozy lounge sofa that converts into a bed for extra functionality."
+  },
+  {
+    "id": 15,
+    "name": "Elegant White Lounge Chair",
+    "category": "Lounge Chair",
+    "price": "75.80",
+    "priceAfterDiscount": "53.06",
+    "imgSrc": "images/white-armchair.png",
+    "description": "An elegant white lounge chair that fits any modern decor."
+  },
+  {
+    "id": 16,
+    "name": "Luxury White Sofa",
+    "category": "Lounge Chair",
+    "price": "159.00",
+    "priceAfterDiscount": "111.30",
+    "imgSrc": "images/white-sofa.png",
+    "description": "A luxury white sofa for a touch of elegance in your home."
+  },
+  {
+    "id": 17,
+    "name": "Sleek Wing Chair",
+    "category": "Lounge Chair",
+    "price": "100.50",
+    "priceAfterDiscount": "70.35",
+    "imgSrc": "images/wing-chair.png",
+    "description": "A sleek wing chair that adds sophistication to any room."
+  },
+  {
+    "id": 18,
+    "name": "Stylish Wooden Armchair",
+    "category": "Lounge Chair",
+    "price": "187.45",
+    "priceAfterDiscount": "131.22",
+    "imgSrc": "images/wooden-armchair.png",
+    "description": "A stylish wooden armchair with a rustic charm."
+  },
+  {
+    "id": 19,
+    "name": "Elegant Wooden Dining Table",
+    "category": "Rocking Chair",
+    "price": "322.50",
+    "priceAfterDiscount": "225.75",
+    "imgSrc": "images/wooden-dining-table.png",
+    "description": "An elegant wooden dining table perfect for family gatherings."
+  },
+  {
+    "id": 20,
+    "name": "Modern Wooden Table",
+    "category": "Rocking Chair",
+    "price": "288.99",
+    "priceAfterDiscount": "202.29",
+    "imgSrc": "images/wooden-table.png",
+    "description": "A modern wooden table that suits contemporary interiors."
+  }
+]
+

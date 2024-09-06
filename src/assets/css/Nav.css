@@ -1,0 +1,77 @@
+.f-logo {
+    height: 40px !important;
+    width: 40px !important;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.l-furni {
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+
+
+
+}
+
+.l-flex {
+    color: #1E99F5;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px !important;
+
+}
+
+.Navbar.Brand {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.Navbar.Brand h2 {
+    margin: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.shopping-cart{
+    font-size: 35px !important;
+    font-weight: 600 !important;
+    margin-top: 5px;
+}
+
+.navItem{
+    margin: 30px !important;
+    font-weight: 600 !important;
+    font-size: 20px !important;
+}
+
+.position-relative {
+    position: relative;
+}
+
+    
+.badge {
+    position: absolute;
+    top: 33px;     
+    right: 7px;     
+    background-color: #070707;     
+    color: white;     
+    border-radius: 50%;
+    width: 15px;     
+    height: 15px;     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px !important;     
+    font-weight: 700 !important;
+}
+
+.navbar-with-line {
+    border-bottom: 1px solid #e7e7e7;
+}

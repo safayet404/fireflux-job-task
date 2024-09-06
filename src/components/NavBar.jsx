@@ -7,6 +7,7 @@ import Account from "../assets/images/Account.png"
 import { TbShoppingBag } from "react-icons/tb";
 import { ProductContext } from '../context/ProductContext';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 const NavBar = () => {
 
   const {cart} = useContext(ProductContext)
@@ -31,23 +32,24 @@ const NavBar = () => {
 
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center">
           <Nav>
-            <Nav.Link className='navItem' href="#features">Home</Nav.Link>
-            <Nav.Link className='navItem' href="#pricing">Products</Nav.Link>
-            <Nav.Link className='navItem' href="#pricing">Categories</Nav.Link>
-            <Nav.Link className='navItem' href="#pricing">Custom</Nav.Link>
-            <Nav.Link className='navItem' href="#pricing">Blog</Nav.Link>
+            <Link className='navItem' href="#features">Home</Link>
+            <Link className='navItem ' to="/product">Products</Link>
+            <Link className='navItem' href="#pricing">Categories</Link>
+            <Link className='navItem' href="#pricing">Custom</Link>
+            <Link className='navItem' href="#pricing">Blog</Link>
+            
           </Nav>
         </Navbar.Collapse>
 
         <Nav className="ms-auto">
-        <Nav.Link href="#deets" className="position-relative">
+        <Link to="cart" className="position-relative">
       <TbShoppingBag className='shopping-cart' />
       <span className="badge">{itemCount.length > 0 ? itemCount.length : 0}</span>
       
-    </Nav.Link>          
-    <Nav.Link eventKey={2} href="#memes">
-            <img src={Account} alt='account' />
-          </Nav.Link>
+    </Link>          
+    <Link>
+            <img className='mt-2'  src={Account} alt='account' />
+          </Link>
         </Nav>
       </Container>
     </Navbar>

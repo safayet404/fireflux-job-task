@@ -17,14 +17,14 @@ const Cart = () => {
   const handleIncreaseCount = (productId) => {
     setQuantities((prevQuantities) => ({
       ...prevQuantities,
-      [productId]: Number(prevQuantities[productId]) + 1, // Convert to Number to avoid NaN
+      [productId]: Number(prevQuantities[productId] || 0) + 1, // Ensure this is a number
     }));
   };
 
   const handleDescreaseCount = (productId) => {
     setQuantities((prevQuantities) => ({
       ...prevQuantities,
-      [productId]: Math.max(Number(prevQuantities[productId]) - 1, 1), // Ensure it doesn't go below 1
+      [productId]: Math.max(Number(prevQuantities[productId] || 0) - 1, 1), // Ensure it doesn't go below 1
     }));
   };
 
@@ -33,7 +33,7 @@ const Cart = () => {
   };
 
   const totalPrice = cart.reduce(
-    (total, item) => total + (item.priceAfterDiscount * quantities[item.id]),
+    (total, item) => total + (item.priceAfterDiscount * (quantities[item.id] || 1)), // Default to 1 if quantity is not defined
     0
   );
 
@@ -54,7 +54,7 @@ const Cart = () => {
                           <p onClick={() => handleDescreaseCount(product.id)} style={{ cursor: 'pointer', margin: "0 10px" }}>
                             <FaMinus />
                           </p>
-                          <span>{quantities[product.id]}</span> {/* Ensure this is a number */}
+                          <span>{quantities[product.id] || 1}</span> {/* Ensure this is a number */}
                           <p onClick={() => handleIncreaseCount(product.id)} style={{ cursor: 'pointer', margin: "0 10px" }}>
                             <FaPlus />
                           </p>

@@ -43,12 +43,15 @@
     font-size: 35px !important;
     font-weight: 600 !important;
     margin-top: 5px;
+    color: black;
+    margin: 10px !important;
 }
 
 .navItem{
-    margin: 30px !important;
+    margin: 25px !important;
     font-weight: 600 !important;
     font-size: 20px !important;
+    text-decoration: none !important;
 }
 
 .position-relative {
@@ -60,7 +63,7 @@
     position: absolute;
     top: 33px;     
     right: 7px;     
-    background-color: #070707;     
+    background-color: #070707 !important;     
     color: white;     
     border-radius: 50%;
     width: 15px;     

@@ -27,32 +27,14 @@ const SignUp = () => {
         const lastName = form.lastName.value;
         const email = form.email.value;
         const password = form.password.value;
-
-        const userData = {
-            firstName,
-            lastName,
-            email,
-            password,
-        };
-
         try {
-            setLoading(true);
+
             const userCredential = await createWithPass(email, password);
-            const user = userCredential.user;
-
-            await updateProfile(user, {
-                displayName: `${firstName} ${lastName}`,
-            });
-
-            console.log(user);
             toast.success("Great! success");
             form.reset();
             navigate("/login");
         } catch (error) {
-            console.error("Signup error:", error);
-            toast.error("Ops!", error.message , "error");
-        } finally {
-            setLoading(false);
+            toast.error("Ops!", error.message, "error");
         }
     };
 

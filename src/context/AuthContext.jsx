@@ -13,6 +13,7 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
   const auth = getAuth(app);
   const [user, setUser] = useState(null);
+  const [loggedIn,setLoggedIn] = useState(null)
   const [loading, setLoading] = useState(true);
 
   const createWithPass = (email, password) => {
@@ -26,6 +27,7 @@ const AuthProvider = ({ children }) => {
       const loggedInUser = result.user;
       sessionStorage.setItem("user", JSON.stringify(loggedInUser));
       setUser(loggedInUser);
+      setLoggedIn(loggedInUser)
       setLoading(false);
       return result;
     });
@@ -69,6 +71,7 @@ const AuthProvider = ({ children }) => {
     signOutProfile,
     user,
     loading,
+    loggedIn
   };
 
   return (

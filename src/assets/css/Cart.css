@@ -27,17 +27,31 @@
 
 .quantity-update {
   display: flex;
+  justify-content: center; 
   align-items: center;
   border: 1px solid #ddd;
-  padding: 20px 10px 20px 10px !important ;
+  padding: 20px 10px;
+  margin: 15px !important;
 }
 
-.cart-name {
-  font-size: 16px;
+.quantity-update .d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.quantity-update p {
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.quantity-update span {
+  margin: 0 10px;
+}
 .cart-name {
   font-size: 16px;
+  color: #656565;
+  font-family: 'Inter', sans-serif;
 }
 
 .cross {
@@ -63,14 +77,18 @@
   font-family: 'Inter', sans-serif;
 }
 
-.checkout-button{
+.checkout-button {
   margin-top: 20px !important;
   background-color: black !important;
   padding: 12px !important;
   width: 350px !important;
-  
+  color: white; /* Ensure the text color is readable */
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Optional: add border-radius for rounded corners */
+  display: block; /* Ensure it behaves like a block element for centering */
+  margin-left: auto; /* Center horizontally within its container */
+  margin-right: auto; /* Center horizontally within its container */
 }
-
 .total-amount-text{
   font-size: 24px;
   color: #656565;

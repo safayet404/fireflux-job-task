@@ -5,13 +5,11 @@ import { TbShoppingBag } from "react-icons/tb";
 import { ProductContext } from '../context/ProductContext';
 
 const ProductList = () => {
-  const { getProductsByCategory, addToCart, categories ,cart} = useContext(ProductContext);
+  const { getProductsByCategory, addToCart, categories } = useContext(ProductContext);
 
-  console.log("Carted",cart);
-  
   const [selectedCategory, setSelectedCategory] = useState('Rocking Chair');
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 6;
 
   const currentItems = getProductsByCategory(selectedCategory).slice(
     (currentPage - 1) * itemsPerPage,
@@ -22,17 +20,21 @@ const ProductList = () => {
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
+    // Scroll to the top of the product container
+    document.querySelector('.product-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
-    setCurrentPage(1); // Reset to the first page when changing category
+    setCurrentPage(1);
+    // Scroll to the top of the product container
+    document.querySelector('.product-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
     <Container className='mt-5'>
       <Row>
-        <Col lg={2} className="categories-section mb-5" style={{ borderRight: "2px solid #F1F1F1"}}>
+        <Col lg={2} md={3} sm={12} className="categories-section mb-5" style={{ borderRight: "2px solid #F1F1F1"}}>
           {categories.map((category) => (
             <Button 
               key={category}
@@ -50,10 +52,10 @@ const ProductList = () => {
           ))}
         </Col>
 
-        <Col lg={9} className="categories-section">
+        <Col lg={9} md={9} sm={12} className="categories-section product-container">
           <Row>
             {currentItems.map((product) => (
-              <Col md={6} lg={4} key={product.id}>
+              <Col md={6} lg={4} sm={6} key={product.id}>
                 <div className="product-card">
                   <div className='image-card'>
                     <img src={product.imgSrc} alt={product.name} />
@@ -72,25 +74,37 @@ const ProductList = () => {
               </Col>
             ))}
           </Row>
-          <Pagination className="mt-4 pagination-color">
-            <Pagination.Prev
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-            />
-            {Array.from({ length: totalPages }, (_, index) => (
-              <Pagination.Item
-                key={index + 1}
-                active={index + 1 === currentPage}
-                onClick={() => handlePageChange(index + 1)}
-              >
-                {index + 1}
-              </Pagination.Item>
-            ))}
-            <Pagination.Next
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-            />
-          </Pagination>
+          {/* Wrapper for pagination */}
+          <div className="pagination-wrapper">
+            <Pagination className="mt-4 pagination-color">
+              <Pagination.Prev
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  if (currentPage > 1) handlePageChange(currentPage - 1);
+                }}
+                disabled={currentPage === 1}
+              />
+              {Array.from({ length: totalPages }, (_, index) => (
+                <Pagination.Item
+                  key={index + 1}
+                  active={index + 1 === currentPage}
+                  onClick={(e) => {
+                    e.preventDefault(); // Prevent default anchor behavior
+                    handlePageChange(index + 1);
+                  }}
+                >
+                  {index + 1}
+                </Pagination.Item>
+              ))}
+              <Pagination.Next
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  if (currentPage < totalPages) handlePageChange(currentPage + 1);
+                }}
+                disabled={currentPage === totalPages}
+              />
+            </Pagination>
+          </div>
         </Col>
       </Row>
     </Container>

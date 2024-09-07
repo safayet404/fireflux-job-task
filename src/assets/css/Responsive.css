@@ -1,0 +1,202 @@
+
+@media (max-width: 575.98px) {  }
+
+@media (max-width: 767.98px) { 
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; 
+    }
+
+    .product-card {
+        width: 90%; 
+        margin-bottom: 15px;
+    }
+    
+      
+    .account-dropdown img {
+        height: 20px; 
+      }
+    
+      .account-dropdown .dropdown-menu {
+        padding: 0.25rem 0;
+      }
+    
+
+     
+    
+ }
+
+@media (max-width: 991.98px) {  
+    .product-card {
+        width: 250px;
+        border: 1px solid #F1F1F1;
+        padding: 15px;
+    }
+    .image-card {
+        position: relative;
+        width: 100% !important;
+        height: 200px !important;
+    }
+    .product-info h3 {
+        font-size: 12px;
+        margin-bottom: 11px;
+    }
+    .product-info p {
+        margin-bottom: 10px;
+        font-family: 'Inter', sans-serif;
+        color: #838383;
+        font-size: 10px;
+    }
+    .account-dropdown img {
+        height: 20px; 
+      }
+    
+      .account-dropdown .dropdown-menu {
+        padding: 0.25rem 0; 
+      }
+}
+
+@media (max-width: 1199.98px) {
+    .product-card {
+        width: 250px;
+        border: 1px solid #F1F1F1;
+        padding: 15px;
+    }
+    .image-card {
+        position: relative;
+        width: 100% !important;
+        height: 200px !important;
+    }
+    .product-info h3 {
+        font-size: 12px;
+        margin-bottom: 11px;
+    }
+    .product-info p {
+        margin-bottom: 10px;
+        font-family: 'Inter', sans-serif;
+        color: #838383;
+        font-size: 10px;
+    }
+
+    .f-logo {
+        height: 20px !important;
+        width: 20px !important;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    
+    .l-furni {
+       
+        font-size: 14px;
+    
+    
+    
+    
+    }
+    .l-flex {
+        
+        font-size: 14px;
+        
+    
+    }
+    .badge {
+        position: absolute;
+        top: 28px;     
+        right: 12px;     
+        background-color: #070707 !important;     
+        color: white;     
+        border-radius: 50%;
+        width: 15px;     
+        height: 15px;     
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 9px !important;     
+        font-weight: 700 !important;
+    }
+    .shopping-cart{
+        font-size: 25px !important;
+        font-weight: 600 !important;
+        color: black;
+        margin: 15px !important;
+    }
+    .account-dropdown img {
+        height: 24px;
+        width: auto; 
+        vertical-align: middle;
+      }
+      
+      .account-dropdown .dropdown-menu {
+        padding: 0.5rem 0;
+      }
+    
+
+    .navItem{
+        margin: 10px !important;
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        text-decoration: none !important;
+        color: #202020 ;
+        padding: 5px 12px 5px 12px  !important;
+    
+    }
+    .checkout-card{
+      
+        padding: 20px !important;
+        width: 300px !important;
+        position: relative;
+      }
+      
+      .checkout-item{
+        font-size: 14px;
+        color: #656565;
+        font-family: 'Inter', sans-serif;
+      }
+      
+      .checkout-button{
+        width: 300px !important;
+        
+      }
+      .total-amount-text{
+        font-size: 15px;
+
+      }
+      .total-amount{
+        font-size: 15px;
+        
+      }
+      .cart-name {
+        font-size: 12px;
+      
+      }
+      .cart-img {
+        position: absolute;
+        width: 30px !important;
+        height: 50px !important;
+        object-fit: cover;
+      }
+      .cart-img-card{
+        background-color: #F2F2F2;
+        border-radius: 12px !important;
+        width: 70px ;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .quantity-update {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ddd;
+        padding: 5px !important ;
+      }
+      
+
+
+  }
+
+@media (max-width: 1399.98px) {  }
+

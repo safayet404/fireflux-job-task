@@ -39,7 +39,7 @@ const Cart = () => {
   return (
     <Container className='mb-4'>
       <Row>
-        <Col lg={7}>
+        <Col lg={7} md={12} sm={12}>
           <h4 className="my-4 checkout-header">Your Cart</h4>
           <div className='cart-card'>
             {localCart?.length > 0 &&
@@ -47,21 +47,19 @@ const Cart = () => {
                 <div key={product.id} className='cart-item'>
                   <Row className='align-items-center'>
                     <Col lg={3}>
-                      <div className='quantity-update '>
-
-                        <div className=' d-flex align-items-center'>
-                          <p onClick={() => handleDecreaseCount(product.id)} style={{ cursor: 'pointer', margin: "0 10px" }}>
-                            <FaMinus />
-                          </p>
-                          <span>{product.quantity}</span> {/* Display the current quantity */}
-                          <p onClick={() => handleIncreaseCount(product.id)} style={{ cursor: 'pointer', margin: "0 10px" }}>
-                            <FaPlus />
-                          </p>
-
-                        </div>
-                      </div>
+                    <div className='quantity-update'>
+    <div className='d-flex align-items-center justify-content-center'>
+      <p onClick={() => handleDecreaseCount(product.id)} style={{ cursor: 'pointer', margin: "0 10px" }}>
+        <FaMinus />
+      </p>
+      <span>{product.quantity}</span>
+      <p onClick={() => handleIncreaseCount(product.id)} style={{ cursor: 'pointer', margin: "0 10px" }}>
+        <FaPlus />
+      </p>
+    </div>
+  </div>
                     </Col>
-                    <Col lg={6}>
+                    <Col lg={6} >
                       <div className='d-flex align-items-center'>
                         <div className='cart-img-card'>
 
@@ -72,7 +70,7 @@ const Cart = () => {
                         <p className='cart-name ms-3'>{product.name}</p>
                       </div>
                     </Col>
-                    <Col lg={3} className="position-relative text-end">
+                    <Col lg={3} md={6} sm={12} className="position-relative text-end">
                       <span
                         className='cross'
                         onClick={() => handleRemoveItem(product.id)}
@@ -95,7 +93,7 @@ const Cart = () => {
           <div className='checkout-card'>
             <div className='d-flex justify-content-between'>
               <p className='checkout-item'>Subtotal </p>
-              <p className='checkout-item'>300</p>
+              <p className='checkout-item'>€{totalPrice.toFixed(2)}</p>
             </div>
             <div className='d-flex justify-content-between'>
               <p className='checkout-item'>Shipping </p>

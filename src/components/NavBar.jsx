@@ -6,52 +6,69 @@ import Account from "../assets/images/Account.png";
 import { TbShoppingBag } from "react-icons/tb";
 import { ProductContext } from '../context/ProductContext';
 import { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { NavDropdown } from 'react-bootstrap';
+import { AuthContext } from '../context/AuthContext';
 
 const NavBar = () => {
   const { cart } = useContext(ProductContext);
+  const {signOutProfile } = useContext(AuthContext)
   const itemCount = cart;
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      signOutProfile() 
+    } catch (error) {
+      console.error("Error logging out:", error.message);
+    }
+  };
 
   return (
     <Navbar collapseOnSelect expand="lg" className='navbar-with-line'>
       <Container>
-        <Navbar.Brand className="d-flex">
+        <Navbar.Brand className="d-flex align-items-center">
           <img className="f-logo" src={F} alt="logo" />
-          <h2><span className='l-furni'> Furni</span><span className='l-flex'>Flex</span></h2>
+          <h2><span className='l-furni'>Furni</span><span className='l-flex'>Flex</span></h2>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center">
           <Nav>
-            {/* Using NavLink for active class management */}
-            <NavLink className='navItem'  to="/home" activeStyle={{ backgroundColor: '#F8F8F8' }}>
+            <NavLink className='navItem' to="/home" activeClassName="active">
               Home
             </NavLink>
-            <NavLink className='navItem' exact to="/product" activeStyle={{ backgroundColor: '#F8F8F8' }}>
+            <NavLink className='navItem' exact to="/product" activeClassName="active">
               Products
             </NavLink>
-            <NavLink className='navItem' to="/category" activeStyle={{ backgroundColor: '#F8F8F8' }}>
+            <NavLink className='navItem' to="/category" activeClassName="active">
               Categories
             </NavLink>
-            <NavLink className='navItem' to="/custom" activeStyle={{ backgroundColor: '#F8F8F8' }}>
+            <NavLink className='navItem' to="/custom" activeClassName="active">
               Custom
             </NavLink>
-            <NavLink className='navItem' to="/blog" activeStyle={{ backgroundColor: '#F8F8F8' }}>
+            <NavLink className='navItem' to="/blog" activeClassName="active">
               Blog
             </NavLink>
           </Nav>
         </Navbar.Collapse>
 
         <Nav className="ms-auto">
-          <NavLink to="/cart" className="position-relative">
-            <TbShoppingBag className='shopping-cart' />
-            <span className="badge">{itemCount.length > 0 ? itemCount.length : 0}</span>
-          </NavLink>
-          <NavLink to="/account">
-            <img className='mt-2' src={Account} alt='account' />
-          </NavLink>
-        </Nav>
+  <NavLink to="/cart" className="position-relative">
+    <TbShoppingBag className='shopping-cart' />
+    <span className="badge">{itemCount.length > 0 ? itemCount.length : 0}</span>
+  </NavLink>
+
+  <NavDropdown
+    title={<img className='mt-2' src={Account} alt='account' />}
+    id="account-dropdown"
+    className="account-dropdown"
+  >
+    <NavDropdown.Item onClick={handleLogout}>Log Out</NavDropdown.Item>
+  </NavDropdown>
+</Nav>
+
       </Container>
     </Navbar>
   );

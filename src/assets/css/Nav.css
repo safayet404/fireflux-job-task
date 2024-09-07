@@ -42,9 +42,8 @@
 .shopping-cart{
     font-size: 35px !important;
     font-weight: 600 !important;
-    margin-top: 5px;
     color: black;
-    margin: 10px !important;
+    margin: 15px !important;
 }
 
 .navItem{
@@ -53,6 +52,8 @@
     font-size: 18px !important;
     text-decoration: none !important;
     color: #202020 ;
+    padding: 5px 12px 5px 12px  !important;
+
 }
 
 .position-relative {
@@ -61,15 +62,15 @@
 
 .navItem.active {
     background-color: #F8F8F8;
-    padding: 5px 12px 5px 12px  !important;
+    padding: 5px 10px 5px 10px  !important;
     border-radius: 5px;
   }
   
     
 .badge {
     position: absolute;
-    top: 33px;     
-    right: 7px;     
+    top: 38px;     
+    right: 12px;     
     background-color: #070707 !important;     
     color: white;     
     border-radius: 50%;
@@ -85,3 +86,16 @@
 .navbar-with-line {
     border-bottom: 1px solid #e7e7e7;
 }
+
+.account-dropdown img {
+   
+    width: auto; 
+    vertical-align: middle;
+  }
+  
+  .account-dropdown .dropdown-menu {
+    padding: 0.5rem 0;
+  }
+
+
+  

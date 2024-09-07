@@ -1,47 +1,47 @@
  [
   {
     "id": 1,
-    "name": "Classic Rocking Chair",
+    "name": "Recliner Chair",
     "category": "Rocking Chair",
     "price": "50.25",
     "priceAfterDiscount": "35.18",
-    "imgSrc": "images/armchair.png",
+    "imgSrc": "images/1.png",
     "description": "A timeless classic rocking chair perfect for relaxing."
   },
   {
     "id": 2,
-    "name": "Modern Rocking Chair",
+    "name": "Timber Ride Padded",
     "category": "Rocking Chair",
     "price": "102.00",
     "priceAfterDiscount": "71.40",
-    "imgSrc": "images/bed.png",
+    "imgSrc": "images/2.png",
     "description": "A sleek and modern rocking chair with a stylish design."
   },
   {
     "id": 3,
-    "name": "Elegant Rocking Bench",
+    "name": "Colored Wooden Chair",
     "category": "Rocking Chair",
     "price": "15.00",
     "priceAfterDiscount": "10.50",
-    "imgSrc": "images/bench.png",
+    "imgSrc": "images/3.png",
     "description": "An elegant rocking bench that adds charm to any space."
   },
   {
     "id": 4,
-    "name": "Space-Saving Rocking Chair",
+    "name": "Blank Bamboo Wicker",
     "category": "Rocking Chair",
     "price": "23.75",
     "priceAfterDiscount": "16.63",
-    "imgSrc": "images/bunk-bed.png",
+    "imgSrc": "images/4.png",
     "description": "A space-saving rocking chair ideal for compact areas."
   },
   {
     "id": 5,
-    "name": "Luxury Rocking Chair",
+    "name": "Isolated Wooden Rock",
     "category": "Rocking Chair",
     "price": "50.00",
     "priceAfterDiscount": "35.00",
-    "imgSrc": "images/cabinet.png",
+    "imgSrc": "images/5.png",
     "description": "A luxury rocking chair with plush seating for maximum comfort."
   },
   {
@@ -163,11 +163,11 @@
   },
   {
     "id": 19,
-    "name": "Elegant Wooden Dining Table",
+    "name": "Minimal Empty Rocking",
     "category": "Rocking Chair",
     "price": "322.50",
     "priceAfterDiscount": "225.75",
-    "imgSrc": "images/wooden-dining-table.png",
+    "imgSrc": "images/6.png",
     "description": "An elegant wooden dining table perfect for family gatherings."
   },
   {

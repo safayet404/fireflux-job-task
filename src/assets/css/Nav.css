@@ -50,14 +50,21 @@
 .navItem{
     margin: 25px !important;
     font-weight: 600 !important;
-    font-size: 20px !important;
+    font-size: 18px !important;
     text-decoration: none !important;
+    color: #202020 ;
 }
 
 .position-relative {
     position: relative;
 }
 
+.navItem.active {
+    background-color: #F8F8F8;
+    padding: 5px 12px 5px 12px  !important;
+    border-radius: 5px;
+  }
+  
     
 .badge {
     position: absolute;

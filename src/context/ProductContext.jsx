@@ -22,27 +22,43 @@ export const ProductProvider = ({ children }) => {
   }, []);
 
   const addToCart = (product) => {
-    setCart(prevCart => {
-      const updatedCart = [...prevCart, product];
-      localStorage.setItem('cart', JSON.stringify(updatedCart));
-      return updatedCart;
-    });
-  };
-  const removeFromCart = (productId) => {
-    setCart(prevCart => {
-      const updatedCart = prevCart.filter(item => item.id !== productId);
+    setCart((prevCart) => {
+      const productExists = prevCart.find((item) => item.id === product.id);
+
+      let updatedCart;
+      if (productExists) {
+        // If the product exists, increase its quantity
+        updatedCart = prevCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      } else {
+        // If the product does not exist, add it with quantity 1
+        updatedCart = [...prevCart, { ...product, quantity: 1 }];
+      }
+
       localStorage.setItem('cart', JSON.stringify(updatedCart));
       return updatedCart;
     });
   };
 
+  const removeFromCart = (productId) => {
+    setCart((prevCart) => {
+      const updatedCart = prevCart.filter((item) => item.id !== productId);
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
+      return updatedCart;
+    });
+  };
 
   const getProductsByCategory = (category) => {
-    return products.filter(product => product.category === category);
+    return products.filter((product) => product.category === category);
   };
 
   return (
-    <ProductContext.Provider value={{ products, cart, addToCart, removeFromCart, getProductsByCategory, categories }}>
+    <ProductContext.Provider
+      value={{ products, cart, addToCart, removeFromCart, getProductsByCategory, categories }}
+    >
       {children}
     </ProductContext.Provider>
   );

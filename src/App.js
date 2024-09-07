@@ -10,6 +10,10 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import ProductPage from './pages/ProductPage';
 import CartPage from './pages/CartPage';
+import HomePage from './pages/HomePage';
+import CategoryPage from './pages/CategoryPage';
+import CustomPage from './pages/CustomPage';
+import BlogPage from './pages/BlogPage';
 
 const App = () => {
   return (
@@ -25,6 +29,10 @@ const App = () => {
               <Route path="/footer" element={<Footer />} />
               <Route path="/product" element={<ProductPage />} />
               <Route path="/cart" element={<CartPage />} />
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/category" element={<CategoryPage />} />
+              <Route path="/custom" element={<CustomPage />} />
+              <Route path="/blog" element={<BlogPage />} />
             </Routes>
           </div>
         </Router>

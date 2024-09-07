@@ -61,7 +61,7 @@ const ProductList = () => {
                   <div className="product-info">
                     <h3>{product.name}</h3>
                     <p className="price">
-                      €{product.price} <span className="old-price">€{product.priceAfterDiscount}</span> 30% OFF
+                      €{product.priceAfterDiscount} <span className="old-price">€{product.price}</span> 30% OFF
                     </p>
                     <p>{product.description}</p>
                     <button onClick={() => addToCart(product)}>
@@ -72,8 +72,7 @@ const ProductList = () => {
               </Col>
             ))}
           </Row>
-          {/* Pagination */}
-          <Pagination className="mt-4">
+          <Pagination className="mt-4 pagination-color">
             <Pagination.Prev
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}

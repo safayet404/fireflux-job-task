@@ -20,14 +20,14 @@ const ProductList = () => {
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    // Scroll to the top of the product container
+  
     document.querySelector('.product-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
     setCurrentPage(1);
-    // Scroll to the top of the product container
+   
     document.querySelector('.product-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
@@ -74,12 +74,12 @@ const ProductList = () => {
               </Col>
             ))}
           </Row>
-          {/* Wrapper for pagination */}
+         
           <div className="pagination-wrapper">
             <Pagination className="mt-4 pagination-color">
               <Pagination.Prev
                 onClick={(e) => {
-                  e.preventDefault(); // Prevent default anchor behavior
+                  e.preventDefault(); 
                   if (currentPage > 1) handlePageChange(currentPage - 1);
                 }}
                 disabled={currentPage === 1}
@@ -89,7 +89,7 @@ const ProductList = () => {
                   key={index + 1}
                   active={index + 1 === currentPage}
                   onClick={(e) => {
-                    e.preventDefault(); // Prevent default anchor behavior
+                    e.preventDefault(); 
                     handlePageChange(index + 1);
                   }}
                 >
@@ -98,7 +98,7 @@ const ProductList = () => {
               ))}
               <Pagination.Next
                 onClick={(e) => {
-                  e.preventDefault(); // Prevent default anchor behavior
+                  e.preventDefault();
                   if (currentPage < totalPages) handlePageChange(currentPage + 1);
                 }}
                 disabled={currentPage === totalPages}

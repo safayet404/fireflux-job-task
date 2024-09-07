@@ -11,7 +11,6 @@ export const ProductProvider = ({ children }) => {
   useEffect(() => {
     setProducts(data);
 
-    // Extract categories from data
     const uniqueCategories = [...new Set(data.map(product => product.category))];
     setCategories(uniqueCategories);
 
@@ -27,14 +26,12 @@ export const ProductProvider = ({ children }) => {
 
       let updatedCart;
       if (productExists) {
-        // If the product exists, increase its quantity
         updatedCart = prevCart.map((item) =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       } else {
-        // If the product does not exist, add it with quantity 1
         updatedCart = [...prevCart, { ...product, quantity: 1 }];
       }
 

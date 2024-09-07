@@ -6,10 +6,10 @@ import { RxCross2 } from "react-icons/rx";
 
 const Cart = () => {
   const { cart, addToCart, removeFromCart } = useContext(ProductContext);
-  const [localCart, setLocalCart] = useState(cart); // Local cart state
+  const [localCart, setLocalCart] = useState(cart); 
 
   useEffect(() => {
-    setLocalCart(cart); // Sync local state with context state
+    setLocalCart(cart); 
   }, [cart]);
 
   const handleIncreaseCount = (productId) => {
@@ -17,18 +17,17 @@ const Cart = () => {
   };
 
   const handleDecreaseCount = (productId) => {
-    // Find product and decrease quantity
     const product = localCart.find((item) => item.id === productId);
     if (product && product.quantity > 1) {
       product.quantity -= 1;
-      setLocalCart([...localCart]); // Update local state
-      localStorage.setItem('cart', JSON.stringify(localCart)); // Sync with local storage
+      setLocalCart([...localCart]);
+      localStorage.setItem('cart', JSON.stringify(localCart)); 
     }
   };
 
   const handleRemoveItem = (productId) => {
-    removeFromCart(productId); // Update context state
-    setLocalCart(localCart.filter(item => item.id !== productId)); // Update local state instantly
+    removeFromCart(productId);
+    setLocalCart(localCart.filter(item => item.id !== productId)); 
   };
 
   const totalPrice = localCart.reduce(

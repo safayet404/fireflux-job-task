@@ -71,9 +71,9 @@
   
   .product-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 20px; /* Space between cards */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; 
   }
   
   .product-card {
@@ -93,7 +93,7 @@
     background-color: #F2F2F2;
     border-radius: 12px !important;
     display: flex;
-  justify-content: center; /* Center horizontally */
+  justify-content: center;
   align-items: center; 
   }
   
@@ -178,7 +178,6 @@
   height: 100%;
 }
 
-/* Pagination wrapper to fix it at the bottom */
 .pagination-wrapper {
   margin-top: auto;
   text-align: center;

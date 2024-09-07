@@ -24,7 +24,7 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password).then((result) => {
       const loggedInUser = result.user;
-      sessionStorage.setItem("user", JSON.stringify(loggedInUser)); // Store user in sessionStorage
+      sessionStorage.setItem("user", JSON.stringify(loggedInUser));
       setUser(loggedInUser);
       setLoading(false);
       return result;
@@ -34,7 +34,7 @@ const AuthProvider = ({ children }) => {
   const signOutProfile = () => {
     setLoading(true);
     return signOut(auth).then(() => {
-      sessionStorage.removeItem("user"); // Remove user from sessionStorage
+      sessionStorage.removeItem("user"); 
       setUser(null);
       setLoading(false);
     });
@@ -43,15 +43,15 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const storedUser = sessionStorage.getItem("user");
     if (storedUser) {
-      setUser(JSON.parse(storedUser)); // Restore user from sessionStorage
+      setUser(JSON.parse(storedUser));
       setLoading(false);
     } else {
       const unSubscribe = onAuthStateChanged(auth, (user) => {
         if (user) {
-          sessionStorage.setItem("user", JSON.stringify(user)); // Store user in sessionStorage
+          sessionStorage.setItem("user", JSON.stringify(user));
           setUser(user);
         } else {
-          sessionStorage.removeItem("user"); // Remove user from sessionStorage
+          sessionStorage.removeItem("user"); 
           setUser(null);
         }
         setLoading(false);
